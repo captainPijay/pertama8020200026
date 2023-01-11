@@ -57,7 +57,7 @@ class DashboardPostController extends Controller
             'slug.unique'=>'Slug Harus Unik',
             'category_id.required'=>'Kategori Nya Apa?',
             'image.image'=>'Harus Gambar(jpg,png,jpeg, dsb)',
-            'image.file'=>'Ukuran File',
+            'image.file'=>'Ukuran File Maximal 1024kb',
             'image.max'=>'Ukuran Maksimal 1024kb',
             'body.required'=> 'Body Harus Di Isi'
         ];
