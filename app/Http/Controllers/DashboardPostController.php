@@ -121,7 +121,7 @@ class DashboardPostController extends Controller
             'category_id.required'=>'Kategori Nya Apa?',
             'image.image'=>'Harus Gambar(jpg,png,jpeg, dsb)',
             'image.file'=>'Ukuran File',
-            'image.max'=>'Ukuran Maksimal 1024kb',
+            'image.max'=>'Ukuran File Maksimal 1024kb',
             'body.required'=> 'Body Harus Di Isi'
         ];
 
