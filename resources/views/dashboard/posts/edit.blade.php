@@ -36,8 +36,12 @@
           </select>
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Post Image</label>
+            <label for="image" class="form-label d-block">Post Image</label>
+            @if ($post->image)
+            <img src="{{ asset('storage/'. $post->image ) }}" class="img-preview img-fluid">
+            @else
             <img class="img-preview img-fluid">
+            @endif
             <input class="form-control" value="{{ old('image',$post->image) }}" type="file" name="image" id="image" onchange="previewImage()">
             @error('image')
             <p class="text-danger">{{ $message }}</p>
@@ -52,7 +56,7 @@
           <trix-editor input="body"></trix-editor>
         </div>
 
-        <button type="submit" class="btn btn-primary">Create Post</button>
+        <button type="submit" class="btn btn-primary">Update Post</button>
       </form>
   </div>
   <script>

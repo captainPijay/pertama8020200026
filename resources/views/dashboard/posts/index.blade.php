@@ -14,6 +14,11 @@
     {{ session('hapus') }}
   </div>
   @endif
+  @if (session()->has('update'))
+  <div class="alert alert-warning col-lg-8" role="alert">
+    {{ session('update') }}
+  </div>
+  @endif
   <div class="table-responsive col-lg-8">
     <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new Post</a>
     <table class="table table-striped table-sm">

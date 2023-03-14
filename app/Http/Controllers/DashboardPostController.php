@@ -19,7 +19,7 @@ class DashboardPostController extends Controller
     public function index()
     {
         return view('dashboard.posts.index', [
-            'posts'=> Post::where('user_id', auth()->user()->id)->get()
+            'posts'=> Post::where('user_id', auth()->user()->id)->latest()->get()
         ]);
     }
 
@@ -139,7 +139,10 @@ class DashboardPostController extends Controller
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         Post::where('id', $post->id)->update($validatedData);
-        return redirect('/dashboard/posts')->with('success', 'Post Has Been UPDATED!');
+        if($post->image){
+            Storage::delete($post->image);
+        }
+        return redirect('/dashboard/posts')->with('update', 'Post Has Been UPDATED!');
     }
 
     /**
