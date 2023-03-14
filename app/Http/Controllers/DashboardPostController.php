@@ -113,7 +113,7 @@ class DashboardPostController extends Controller
             'title'=>'required|max:255',
             'category_id'=>'required',
             'image'=>'image|file|max:1024',
-            'body'=>'required',
+            'body'=>'required'
         ];
         $pesan_validasi = [
             'title.required'=>'Title Harus Di Isi',

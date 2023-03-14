@@ -2,11 +2,13 @@
 
 
 use App\Models\Category;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\DashboardPostController;
-use App\Http\Controllers\AdminCategoryController;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,11 +63,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 });
 
-// Route::get('/categories/{category:slug}',function(Category $category){
+// Route::get('/categories/{webdesain:slug}',function(Category $webdesain){
 //     return view('category',[
-//         'title'=>"Post By Category : $category->name",
+//         'title'=>"Post By Category : $webdesain->name",
 //         'active'=>'categories',
-//         'posts'=> $category->posts->load('category','author'),
+//         'posts'=> $webdesain->posts->load('category','author'),  //ini = select * from posts where posts.category_id = category.id(konversi dari slug)
 //     ]);
 // });
 // Route::get('/author/{author:username}',function(User $author){
