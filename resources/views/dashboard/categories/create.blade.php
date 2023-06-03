@@ -41,6 +41,7 @@
           </div>
           <button type="submit" class="btn btn-primary">Create Post</button>
     </form>
+    <h1>coba github</h1>
   </div>
 
   <script>
