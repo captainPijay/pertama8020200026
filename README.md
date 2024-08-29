@@ -13,7 +13,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues)
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting)gg
 
-aravel is accessible, powerful, and provides tools required for lare, robut aplicatngn
+aravel is accessible, powerful, and provides tools required for lare, robut aplictngn
 
 ## Learning Laravel=
 
